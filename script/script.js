@@ -18,14 +18,14 @@ function verificarTexto1() {
     if (textArea.value.trim() === "") {
         botonEncriptar.disabled = true;
         botonDesencriptar.disabled = true;
-        mensaje.style.backgroundImage = 'url("/imagen/no-texto.png")';
+        mensaje.style.backgroundImage = 'url("imagen/no-texto.png")';
     }
     else if (tieneAcentos) {
-        mensaje.style.backgroundImage = 'url("/imagen/no-acentos.png")';
+        mensaje.style.backgroundImage = 'url("imagen/no-acentos.png")';
         botonEncriptar.disabled = true;
         botonDesencriptar.disabled = true;
     } else {
-        mensaje.style.backgroundImage = 'url("/imagen/r-no-acentos.png")';
+        mensaje.style.backgroundImage = 'url("imagen/r-no-acentos.png")';
         botonEncriptar.disabled = false;
         botonDesencriptar.disabled = false;
         botonCopiar.disabled = true;
@@ -100,13 +100,13 @@ function copiarTexto() {
     navigator.clipboard.writeText(texto2)
         .then(() => {
             console.log("Texto copiado al portapapeles: " + texto2);
-            mensaje.style.backgroundImage = 'url("/imagen/text-copiado.png")';
+            mensaje.style.backgroundImage = 'url("imagen/text-copiado.png")';
             mensaje.value = "";
             deshabilitarBoton();
         })
         .catch((error) => {
             console.error("Error al copiar al portapapeles: ", error);
-            mensaje.style.backgroundImage = 'url("/imagen/text-no-copiado.png")';
+            mensaje.style.backgroundImage = 'url("imagen/text-no-copiado.png")';
             deshabilitarBoton();
         });
 };
