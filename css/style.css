@@ -104,7 +104,7 @@
 
 .mensaje {
     background: white;
-    background-image: url("imagen/no-texto.png");
+    background-image: url("/imagen/no-texto.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
